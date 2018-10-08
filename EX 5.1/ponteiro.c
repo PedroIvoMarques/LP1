@@ -5,9 +5,7 @@
 int main(){
 	int a,b ;
 	
-	scanf("%d %d",&a,&b);
-	printf("%d\n",a);
-	printf("%d\n",b);	
+	scanf("%d %d",&a,&b);	
 	int *p;	
 	if (a>b){
 
@@ -18,6 +16,7 @@ int main(){
 		p=&b;
 		}
 		*p-=50;
-	printf("%d\n",*p);
+	printf("%d\n",a);
+	printf("%d\n",b);
 return 0;
 }
