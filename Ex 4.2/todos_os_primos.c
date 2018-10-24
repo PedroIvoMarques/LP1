@@ -1,27 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
-int todos_os_primos(int a){
+int eh_primo(int g){
 	int cont=0;
-	for(int i=2; i <= a; i++){
-		if ((a/i)*i==a){
+	for(int i=2; i <= g; i++){
+		if ((g/i)*i==g){
 			cont++;
 		}
 	}
-	return cont==1;
+	if (cont==1){
+		return 1;
+	}
+	else{
+		return 0;}
 }
-		
-int main(){
-	int a,b,x=2;
-	scanf("%d",&a);
-	while(x<=a){
-		b=todos_os_primos(x);
+
+void todos_os_primos(int max){
+	int cont=0, b, x=2;
+	while(x<=max){
+		b=eh_primo(x);
 		if (b!=0){	
 			printf("%d\n", x);
 		}	
 		x++;
 	}
+}
+		
+int main(){
+	int a;
+	scanf("%d",&a);
+	todos_os_primos(a);
 	return 0;
 }
