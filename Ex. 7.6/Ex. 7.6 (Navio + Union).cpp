@@ -33,7 +33,7 @@ struct Navio{
 };
 
 
-void preenche(struct Navio* n, int t){3W
+void preenche(struct Navio* n, int t){
     	
     scanf("%s",(*n).nome);
 	scanf("%d",&(*n).comprimento);
