@@ -1,23 +1,27 @@
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
+
+int strlen2 (char* str){
+	int i,cont;
+	cont=0;
+	for (i=0;*(str+i)!='\0';i++){
+		cont++;
+	}	
+return cont;
+
+}
+
 void strjoin(char* d,char* o1 ,char* o2){
-	int cont,i,i2,f;
-	cont=i2=0;
-	for (i=0;cont!=2;i++){
-		if(cont==0){
-			*(d+i)=*(o1+i);
-			if(*(o1+i+1)=='\0'){
-				cont= 1;
-			}
-		}
-		else{
-			*(d+i)=*(o2+i2);
-			if(*(o2+i2)=='\0'){
-				cont= 2;
-			}
-			i2++;
-		}
+	int i,j,meio;
+	for (i=0;i<strlen2(o1);i++){
+		*(d+i)=*(o1+i);
+	}
+	meio = strlen2(o1);
+	for (j=0;j<strlen2(o2)+1;j++){
+	
+		*(d+meio+j)=*(o2+j);
 	}	
 }
 
